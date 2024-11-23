@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Data Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Kid Data Management</h1>
+
+    <button class="button" onclick="getData()">Get Data</button>
+    <button class="button" onclick="showAddForm()">Add Data</button>
+
+    <table id="dataTable" class="hidden">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>School</th>
+                <th>Likes</th>
+                <th>Filename</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <form id="addEditForm" class="hidden">
+        <h2 id="formTitle">Add/Edit Kid Data</h2>
+        <input type="hidden" id="kidId" />
+        <label for="kidName">Kid Name:</label>
+        <input type="text" id="kidName" required />
+        
+        <label for="school">School:</label>
+        <input type="text" id="school" required />
+        
+        <label for="likes">Likes:</label>
+        <input type="number" id="likes" required />
+        
+        <label for="filename">Filename:</label>
+        <input type="text" id="filename" required />
+        
+        <label for="imagePath">Image Path:</label>
+        <input type="file" id="imagePath" required />
+        
+        <button type="button" class="button" onclick="saveData()">Save</button>
+        <button type="button" class="button" onclick="deleteData()">Delete</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
